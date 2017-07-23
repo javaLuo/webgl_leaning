@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>webgl_leaning</title>
+		<link rel="stylesheet" href="codes/css.css">
+	</head>
+	<body>
+		<canvas id="canvas" width="500" height="500"></canvas>
+		<script src="codes/js.js"></script>
+		<script id="shader-vs" type="shader">
+			attribute vec3 v3Position;
+			void main() {
+				gl_Position = vec4(v3Position, 1.0);
+			}
+		</script>
+		<script id='shader-fs' type="shader">
+			void main() {
+				gl_FragColor = vec4(1.0,1.0,1.0,1.0);
+			}
+		</script>
+	</body>
+</html>
